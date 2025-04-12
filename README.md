@@ -64,6 +64,12 @@ Key Insights:
 
 - 📈 Sales % by Day Interval
 
+  
+  
+  ![Vestiaire_Collective_Data_page-0001](https://github.com/user-attachments/assets/7b439afc-9f20-4f71-ac9c-0169d02fa1ad)
+
+
+
 
 ## 🔄 Reproducibility
 How to Run the Project:
