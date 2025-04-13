@@ -1,8 +1,8 @@
-# Second Hand Luxury Market Data Pipeline - GCP Batch Processing
+# Second Hand Luxury Market Data Pipeline 
 This project demonstrates the second hand luxury market trend analysis pipeline using Google Cloud Platform (GCP). 
 
-It processes and analyzes second hand luxury product sales data to uncover insights such as top-selling brands, seasonality patterns, and regional demand.
-The entire pipeline is developed using Batch Processing with Apache Spark on Dataproc, Workflow Orchestration with Apache Airflow (Cloud Composer), and Data Warehousing with BigQuery. The project is fully automated using Terraform (Infrastructure as Code). 
+It processes and analyzes second hand luxury product sales data to uncover insights such as Seller Distribution by Country, Average Brand Price and so on.
+The entire pipeline is developed using Batch Processing with Apache Spark on Dataproc, Workflow Orchestration with Apache Airflow (Cloud Composer), and Data Warehousing with BigQuery. Some part of the project is automated using Terraform (Infrastructure as Code). 
 
 This project is the final part of this Zoomcamp: https://github.com/DataTalksClub/data-engineering-zoomcamp
 
@@ -29,10 +29,10 @@ This project is the final part of this Zoomcamp: https://github.com/DataTalksClu
 
  - Data Visualization:
     
- - Looker Studio: Visualization tool for reporting and insights.
+   Looker Studio: Visualization tool for reporting and insights.
    
 ## 🔧Project Architecture
-This project sets up an automated data pipeline using Docker, Airflow, dataproc, Terraform, and Spark, all integrated into Google Cloud Platform (GCP). The pipeline will process and transform data in batches, store it in Google Cloud Storage (GCS), perform transformations using dataproc, and load it into BigQuery.
+This project sets up an automated data pipeline using Docker, Airflow, dataproc, Terraform, and Spark, all integrated into Google Cloud Platform (GCP). The pipeline will store data in Google Cloud Storage (GCS), process and transform it in batches, perform transformations using dataproc, and load it into BigQuery.
 
 ![Screenshot 2025-04-11 231134](https://github.com/user-attachments/assets/7b0f469f-26bd-4b32-ae24-7d985733929d)
 
@@ -51,7 +51,7 @@ The pipeline consists of the following key components:
 
 - Spark: Processes data in batches and writes it to BigQuery for reporting or analysis.
 
-- Looker: Studiofor visualization
+- Looker: Studio for visualization
 
 ## 📊Dashboard:
 Key Insights:
@@ -75,7 +75,7 @@ Key Insights:
 How to Run the Project:
 Clone the repository.
 
-📦 Prerequisites
+### 📦 Prerequisites
 
 1- Google Cloud Platform (GCP) Project
 
@@ -185,18 +185,21 @@ Use colab_notebook.ipynb to:
   --bucket=bucket-Name
 
 Then submit it :
-
-        ```
-        gcloud dataproc jobs submit pyspark gs://bucket-Name/Scripts/Spark_Batch_processing.py \
-         --cluster=cluster-Name \
-         --region=europe-west1
-
+    <pre> ``` gcloud dataproc jobs submit pyspark gs://bucket-Name/Scripts/Spark_Batch_processing.py \
+             --cluster=cluster-Name \ 
+              --region=europe-west1 ``` </pre>
+           
 
 3- Upload DAGs to Cloud Composer
 
 - Upload your Airflow DAG files to the GCS bucket.
 
 - This will automatically register the DAGs in Airflow.
+
+  
+![Screenshot 2025-04-13 112724](https://github.com/user-attachments/assets/862bbb9c-1a76-408d-859e-24730d6cea1d)
+
+  
 
 ## Next Step 
 Environment Separation
